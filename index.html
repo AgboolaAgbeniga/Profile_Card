@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/e6f37f5b27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <article class="card" data-testid="test-profile-card" role="region" aria-labelledby="test-user-name">
+    <header class="card-header">
+      <div class="card-cover"></div>
+      <figure class="card-avatar">
+        <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1695738980/WhatsApp_Image_2022-06-04_at_11.17.46_PM_ziwf51-Circle_leosmh.jpg" alt="User Avatar" data-testid="test-user-avatar" />
+      </figure>
+      <h2 class="card-fullname" data-testid="test-user-name">Agboola Emmanuel</h2>
+      <p class="card-jobtitle">Civil Engineer</p>
+
+      <nav class="social-links" data-testid="test-user-social-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-x" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </nav>
+    </header>
+
+    <main class="card-main">
+      <!-- ABOUT -->
+      <section class="card-section is-active" id="about">
+  <h3>About</h3>
+  <p data-testid="test-user-bio" id="about_p">
+    Passionate Civil Engineer with expertise in sustainable construction, project management, and
+    Building Information Modelling (BIM). Focused on delivering projects that merge innovation,
+    safety, and environmental responsibility.
+  </p>
+  <p class="user-time">
+    Current Time (ms): <span data-testid="test-user-time" id="time"></span>
+  </p>
+</section>
+
+
+      <!-- HOBBIES -->
+      <section class="card-section" id="hobbies" data-testid="test-user-hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Reading architectural journals</li>
+          <li>3D modeling & design exploration</li>
+          <li>Jogging and fitness</li>
+          <li>Watching documentaries</li>
+          <li>Photography</li>
+          <li>Volunteering for community projects</li>
+          <li>Learning new programming tools</li>
+          <li>Playing chess</li>
+          <li>Traveling and site visits</li>
+          <li>Music production</li>
+          <li>Exploring sustainable materials</li>
+          <li>Sketching building concepts</li>
+        </ul>
+      </section>
+
+      <!-- DISLIKES -->
+      <section class="card-section" id="dislikes" data-testid="test-user-dislikes">
+        <h3>Dislikes</h3>
+        <ul>
+          <li>Environmental pollution</li>
+          <li>Missed deadlines</li>
+          <li>Unclear communication</li>
+          <li>Procrastination</li>
+          <li>Traffic congestion</li>
+          <li>Wastage of materials</li>
+          <li>Low safety standards</li>
+          <li>Untidy workspaces</li>
+          <li>Noise pollution</li>
+          <li>Neglect of sustainability</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="card-buttons">
+      <button data-section="about" aria-pressed="true">ABOUT</button>
+      <button data-section="hobbies" aria-pressed="false">HOBBIES</button>
+      <button data-section="dislikes" aria-pressed="false">DISLIKES</button>
+    </footer>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
