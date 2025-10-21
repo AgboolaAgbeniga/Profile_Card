@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profile Card</title>
+  <title>Profile Card | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e6f37f5b27.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
+<body class="home">
+  <!-- === NAVIGATION BAR === -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo"><a href="index.html" >Sugar</a></h1>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === PROFILE CARD === -->
   <article class="card" data-testid="test-profile-card" role="region" aria-labelledby="test-user-name">
     <header class="card-header">
       <div class="card-cover"></div>
@@ -18,9 +38,9 @@
       <p class="card-jobtitle">Frontend Engineer</p>
 
       <nav class="social-links" data-testid="test-user-social-links">
-        <a href="https://www.linkedin.com/in/agboola-agbeniga-18110760/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/AgboolaAgbeniga" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://x.com/PoojaMedia" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/agboola-agbeniga-18110760/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/AgboolaAgbeniga" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/PoojaMedia" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
       </nav>
     </header>
 
@@ -41,25 +61,25 @@
         <h3>Hobbies</h3>
         <ul>
           <li>Reading architectural journals</li>
-          <li>3D modeling & design exploration</li>            
+          <li>3D modeling & design exploration</li>
           <li>Volunteering for community projects</li>
           <li>Learning new programming tools</li>
           <li>Playing chess</li>
           <li>Traveling and site visits</li>
-                <li>Sketching building concepts</li>
+          <li>Sketching building concepts</li>
         </ul>
       </section>
 
       <section class="card-section" id="dislikes">
         <h3>Dislikes</h3>
         <ul>
-                    <li>Missed deadlines</li>
+          <li>Missed deadlines</li>
           <li>Unclear communication</li>
           <li>Procrastination</li>
           <li>Traffic congestion</li>
-                   <li>Low safety standards</li>
+          <li>Low safety standards</li>
           <li>Untidy workspaces</li>
-                  <li>Neglect of sustainability</li>
+          <li>Neglect of sustainability</li>
         </ul>
       </section>
     </main>
@@ -71,7 +91,7 @@
     </footer>
   </article>
 
+ 
   <script src="script.js"></script>
 </body>
 </html>
- 

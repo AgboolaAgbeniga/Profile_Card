@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e6f37f5b27.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo"><a href="index.html" >Sugar</a></h1>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTACT FORM -->
+  <main class="page-container">
+    <section class="contact-content">
+      <h2>Contact Me</h2>
+      <p>Have a question, collaboration idea, or just want to say hello? Fill out the form below:</p>
+
+      <form id="contactForm" novalidate>
+        <!-- Full Name -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required data-testid="test-contact-name" aria-describedby="test-contact-error-name">
+        <span id="test-contact-error-name" class="error-message" aria-live="polite"></span>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required data-testid="test-contact-email" aria-describedby="test-contact-error-email">
+        <span id="test-contact-error-email" class="error-message" aria-live="polite"></span>
+
+        <!-- Subject -->
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Message subject" required data-testid="test-contact-subject" aria-describedby="test-contact-error-subject">
+        <span id="test-contact-error-subject" class="error-message" aria-live="polite"></span>
+
+        <!-- Message -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required data-testid="test-contact-message" aria-describedby="test-contact-error-message"></textarea>
+        <span id="test-contact-error-message" class="error-message" aria-live="polite"></span>
+
+        <button type="submit" data-testid="test-contact-submit">Send Message</button>
+        <p id="test-contact-success" class="success-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
