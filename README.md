@@ -1,22 +1,79 @@
 # Profile Card
 
+A responsive, multi-page web application featuring a profile card, About page with reflective sections, and Contact form with validation. Built with HTML, CSS, and JavaScript, focusing on accessibility and semantic markup.
 
-A responsive, multi-page web app featuring a profile card, About page, and Contact form. Built with HTML, CSS, and JavaScript.
+## Project Overview
 
-## Features
+This project extends a single profile card into a full multi-page application, implementing proper accessibility features, form validation, and responsive design.
+
+## Features & Requirements
 
 
-- **Navigation Bar:** Consistent navigation across Home, About, and Contact pages.
-- **Profile Card (Home):** Displays avatar, name, job title, and social links. Includes tabbed sections (About, Hobbies, Dislikes) and a live time display.
-- **About Page:** Details your bio and goals, with a clean, sectioned layout.
-- **Contact Page:** Features a contact form with validation and feedback messages.
-- **Responsive Design:** Optimized for desktop and mobile screens.
-- **Accessible:** Uses ARIA attributes and supports keyboard navigation.
-- **Dynamic UI:** JavaScript handles tab switching, live time, and dynamic list heights for a smooth user experience.
+### 1. Profile Card (Home Page)
+- **Profile Overview:** 
+  - Avatar, name, job title, and social links
+  - Card UI with hover effects and smooth transitions
+  - Live time display updating every second
+- **Tabbed Interface:**
+  - About section
+  - Hobbies section
+  - Dislikes section
+- **Data TestIDs:**
+  - Profile Card: `test-profile-card`
+  - User Avatar: `test-user-avatar`
+  - Social Links: `test-user-social-links`
 
-## Demo
+### 2. Contact Page
+- **Form Fields with TestIDs:**
+  - Full Name: `test-contact-name`
+  - Email: `test-contact-email`
+  - Subject: `test-contact-subject`
+  - Message: `test-contact-message`
+  - Submit Button: `test-contact-submit`
+- **Validation Features:**
+  - Error messages (TestIDs: `test-contact-error-<field>`)
+  - Success message (TestID: `test-contact-success`)
+  - Real-time validation
+  - Email format verification
+  - Minimum message length (10 characters)
+- **Accessibility:**
+  - ARIA labels and descriptions
+  - Error message association
+  - Keyboard navigation support
+  - Focus management
 
-![Profile Card Screenshot](demo-screenshot.png)
+### 3. About Page
+- **Required Sections with TestIDs:**
+  - Main wrapper: `test-about-page`
+  - Bio: `test-about-bio`
+  - Goals in program: `test-about-goals`
+  - Areas of low confidence: `test-about-confidence`
+  - Note to future self: `test-about-future-note`
+  - Extra thoughts: `test-about-extra`
+- **Semantic Structure:**
+  - Proper heading hierarchy
+  - Section organization
+  - Semantic HTML elements
+
+## Technical Implementation
+
+### Accessibility Features
+1. **Skip Links:**
+   - Skip to main content functionality
+   - Visible on keyboard focus
+   - Proper positioning and styling
+
+2. **ARIA Attributes:**
+   - `aria-label` for buttons and links
+   - `aria-describedby` for form fields
+   - `aria-pressed` for toggle buttons
+   - `role` attributes where needed
+
+3. **Keyboard Navigation:**
+   - Visible focus indicators
+   - Logical tab order
+   - Interactive elements accessible via keyboard
+   - Enhanced focus styles
 
 ## Getting Started
 
@@ -49,20 +106,46 @@ A responsive, multi-page web app featuring a profile card, About page, and Conta
 
 
 ### Testing & Validation
-- **Browser Testing:**
-  - Test all three pages (Home, About, Contact) in different browsers
-  - Verify responsive design using browser developer tools
-  - Test navigation bar and tab switching
-  - Test keyboard navigation and screen reader compatibility
+1. **Accessibility Testing:**
+   - Test with screen readers
+   - Verify keyboard navigation
+   - Check ARIA attributes
+   - Validate skip links
 
-- **Form Testing:**
-  - Submit the contact form with valid and invalid data to check validation and feedback
+2. **Form Testing:**
+   - Test all validation rules
+   - Verify error messages
+   - Check success scenarios
+   - Test keyboard interaction
+   - Validate all data-testid attributes:
+     ```html
+     test-contact-name
+     test-contact-email
+     test-contact-subject
+     test-contact-message
+     test-contact-submit
+     test-contact-error-*
+     test-contact-success
+     ```
 
-- **Performance Testing:**
-  - Check timer accuracy on the Home page
-  - Verify smooth tab and page transitions
-  - Test on different screen sizes
-  - Monitor memory usage with long-running timer
+3. **About Page Testing:**
+   - Verify all required sections present:
+     ```html
+     test-about-page
+     test-about-bio
+     test-about-goals
+     test-about-confidence
+     test-about-future-note
+     test-about-extra
+     ```
+   - Check semantic HTML structure
+   - Validate heading hierarchy
+
+4. **Responsive Testing:**
+   - Test on multiple devices
+   - Verify breakpoints
+   - Check mobile navigation
+   - Validate touch interactions
 
 ### Known Issues
 - Timer precision may vary slightly between browsers
