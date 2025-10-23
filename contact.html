@@ -34,7 +34,7 @@
       <h2>Contact Me</h2>
       <p>Have a question, collaboration idea, or just want to say hello? Fill out the form below:</p>
 
-      <form id="contactForm" novalidate>
+      <form id="contactForm" novalidate aria-label="Contact Form">
         <!-- Full Name -->
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required data-testid="test-contact-name" aria-describedby="test-contact-error-name">
@@ -42,7 +42,17 @@
 
         <!-- Email -->
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="name@example.com" required data-testid="test-contact-email" aria-describedby="test-contact-error-email">
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="name@example.com" 
+          required 
+          data-testid="test-contact-email" 
+          aria-describedby="test-contact-error-email"
+          aria-required="true"
+          autocomplete="email"
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
         <span id="test-contact-error-email" class="error-message" aria-live="polite"></span>
 
         <!-- Subject -->
@@ -52,10 +62,20 @@
 
         <!-- Message -->
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required data-testid="test-contact-message" aria-describedby="test-contact-error-message"></textarea>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="5" 
+          placeholder="Write your message... (minimum 10 characters)" 
+          required 
+          data-testid="test-contact-message" 
+          aria-describedby="test-contact-error-message"
+          aria-required="true"
+          minlength="10"
+        ></textarea>
         <span id="test-contact-error-message" class="error-message" aria-live="polite"></span>
 
-        <button type="submit" data-testid="test-contact-submit">Send Message</button>
+        <button type="submit" data-testid="test-contact-submit" aria-label="Submit contact form">Send Message</button>
         <p id="test-contact-success" class="success-message" aria-live="polite"></p>
       </form>
     </section>

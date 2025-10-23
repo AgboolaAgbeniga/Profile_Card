@@ -134,7 +134,7 @@ if (contactForm) {
 
     // Show success if valid
     if (isValid) {
-      successMessage.textContent = "✅ Your message has been sent successfully!";
+      successMessage.textContent = "Your message has been sent successfully! We'll get back to you soon.";
       contactForm.querySelectorAll("input, textarea").forEach(el => {
         el.style.borderColor = "green";
       });
