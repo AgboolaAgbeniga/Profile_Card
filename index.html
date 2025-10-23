@@ -12,11 +12,12 @@
 </head>
 
 <body class="home">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- === NAVIGATION BAR === -->
   <nav class="navbar">
     <div class="nav-container">
       <h1 class="logo"><a href="index.html" >Sugar</a></h1>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <button type="button" class="menu-toggle" aria-label="Toggle menu">
         <i class="fa-solid fa-bars"></i>
       </button>
       <ul class="nav-links">
@@ -28,7 +29,7 @@
   </nav>
 
   <!-- === PROFILE CARD === -->
-  <article class="card" data-testid="test-profile-card" role="region" aria-labelledby="test-user-name">
+  <article id="main-content" class="card" data-testid="test-profile-card" role="region" aria-labelledby="test-user-name">
     <header class="card-header">
       <div class="card-cover"></div>
       <figure class="card-avatar">
