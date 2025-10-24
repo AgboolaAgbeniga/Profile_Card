@@ -35,7 +35,7 @@
       <figure class="card-avatar">
         <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1695738980/WhatsApp_Image_2022-06-04_at_11.17.46_PM_ziwf51-Circle_leosmh.jpg" alt="User Avatar" data-testid="test-user-avatar" />
       </figure>
-      <h2 class="card-fullname" id="test-user-name">Agboola Emmanuel</h2>
+      <h2 class="card-fullname"  data-testid="test-user-name">Agboola Emmanuel</h2>
       <p class="card-jobtitle">Frontend Engineer</p>
 
       <nav class="social-links" data-testid="test-user-social-links">
@@ -48,19 +48,19 @@
     <main class="card-main">
       <section class="card-section is-active" id="about">
         <h3>About</h3>
-        <p id="about_p">
+        <p id="about_p" data-testid="test-user-bio">
           A Civil Engineer with expertise in sustainable construction, project management, and
           Building Information Modelling (BIM). Focused on delivering projects that merge innovation,
           safety, and environmental responsibility.
         </p>
         <p class="user-time">
-          Current Time: <span id="time" aria-live="polite"></span>
+          Current Time: <span id="time" data-testid="test-user-time" aria-live="polite"></span>
         </p>
       </section>
 
       <section class="card-section" id="hobbies">
         <h3>Hobbies</h3>
-        <ul>
+        <ul data-testid="test-user-hobbies">
           <li>Reading architectural journals</li>
           <li>3D modeling & design exploration</li>
           <li>Volunteering for community projects</li>
@@ -73,7 +73,7 @@
 
       <section class="card-section" id="dislikes">
         <h3>Dislikes</h3>
-        <ul>
+        <ul data-testid="test-user-dislikes">
           <li>Missed deadlines</li>
           <li>Unclear communication</li>
           <li>Procrastination</li>

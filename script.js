@@ -134,9 +134,15 @@ if (contactForm) {
 
     // Show success if valid
     if (isValid) {
-      successMessage.textContent = "Your message has been sent successfully! We'll get back to you soon.";
+      successMessage.textContent = "Message sent successfully! Thank you for contacting us.";
       contactForm.querySelectorAll("input, textarea").forEach(el => {
         el.style.borderColor = "green";
+        // Clear any remaining error messages
+        const errorId = `test-contact-error-${el.name}`;
+        const errorElement = document.getElementById(errorId);
+        if (errorElement) {
+          errorElement.textContent = "";
+        }
       });
       contactForm.reset();
     }
